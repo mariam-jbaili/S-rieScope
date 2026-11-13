@@ -1,0 +1,16 @@
+/* Background dyal section w inputs */
+.bg-dark {
+  background-color: rgba(25, 25, 25, 1) !important;
+}
+
+/* Placeholder */
+.form-control::placeholder {
+  color: #bababa;
+  opacity: 1;
+}
+
+/* Bordure l inputs bach ybanou fo9 l background */
+.form-control,
+.form-select {
+  border: 1px solid #393939;
+}
