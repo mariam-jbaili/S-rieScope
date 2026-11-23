@@ -46,7 +46,10 @@
             <p  class="text-danger" id="erreurGenre"></p>
             
         </div>
-
+         <div><label for="langue"> Langue *</label>
+         <input type="text" class="form-control bg-dark text-white" name="langue" placeholder="Ex. English"
+            id="langue" required />
+         </div>
         <div class="mb-3">
           <label for="Description" class="form-label">Description</label>
           <textarea class="form-control text-white bg-dark" name="Description"
@@ -80,7 +83,7 @@
 
 
         <div class="col-12 col-md-3">
-          <button type="reset" class="btn btn-light w-100">
+          <button type="button" class="btn btn-light w-100" id="Reinitialiser">
             <i class="fa-solid fa-rotate-left"></i>
             Réinitialiser
           </button>
