@@ -1,4 +1,4 @@
-import { getById , Supprimer } from "../services/serieService.js";
+import { getById , Supprimer , getAll} from "../services/serieService.js";
 import { setIdModifier } from "../data/store.js";
 export function afficherCartes(series) {
     const container = document.getElementById("list_des_serie");
@@ -57,12 +57,22 @@ export function afficherCartes(series) {
         const button_supprimer = document.createElement("button");
               button_supprimer.className = "btn btn-outline-danger w-100 rounded-pill";
               button_supprimer.textContent = "Supprimer";
-            //   button_supprimer.addEventListener("click", async function () {
-            //                  await Supprimer(serie.id);
-            //                  console.log("supprimer avec");
+              button_supprimer.addEventListener("click", async function () {
                              
-            //   }
-            //   )
+            if (confirm("Voulez-vous vraiment supprimer cette série ?")) {
+                      await Supprimer(serie.id);
+                       
+                       console.log("Série supprimée avec succès");
+
+                       const series = await getAll();
+
+                       afficherCartes(series);
+
+            } else {
+                     return 
+            }                 
+              }
+              )
         const button_modifier = document.createElement("button");
               button_modifier.className = "btn btn-light w-100 rounded-pill";
              button_modifier.textContent = "Modifier";

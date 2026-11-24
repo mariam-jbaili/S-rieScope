@@ -1,56 +1,97 @@
-# ROADMAP DU PROJET – SÉRIESCOPE
+# 🎬 SérieScope
 
-## 1. Préparation du projet
-- Création de la structure des fichiers.
-- Configuration de Bootstrap 5 et Font Awesome.
-- Initialisation du repository Git et organisation des branches.
+**SérieScope** est une application web de gestion des séries qui permet aux utilisateurs de consulter, rechercher, filtrer, ajouter, modifier et supprimer des séries à travers une interface simple et intuitive.
 
-## 2. Conception de l'interface (HTML / CSS)
-- Création du Header et de la navigation.
-- Création de la barre de recherche.
-- Création du filtre par genre.
-- Création du formulaire d'ajout d'une série.
-- Préparation de la zone d'affichage des séries.
-- Adaptation de l'interface aux différents écrans (Responsive Design).
+Le projet utilise JavaScript Vanilla pour gérer les interactions avec l'utilisateur et Axios pour communiquer avec une API REST.
 
-## 3. Intégration de l'API TVmaze
-- Connexion à l'API TVmaze avec Fetch.
-- Récupération des données des séries.
-- Extraction des informations : nom, image, genre, langue, note et description.
-- Gestion des données récupérées.
+## ✨ Fonctionnalités
 
-## 4. Affichage dynamique (DOM)
-- Création des cartes de séries dynamiquement.
-- Affichage des informations de chaque série.
-- Gestion des images et des descriptions manquantes.
+- 📺 Affichage des séries sous forme de cartes.
+- 🔍 Recherche de séries par nom.
+- 🎭 Filtrage des séries par genre.
+- ➕ Ajout d'une nouvelle série.
+- ✏️ Modification des informations d'une série.
+- 🗑️ Suppression d'une série.
+- 🌐 Récupération et gestion des données via une API REST.
+- ⚠️ Gestion des erreurs et affichage des notifications.
 
-## 5. Fonctionnalité de recherche
-- Recherche d'une série par son nom.
-- Affichage des résultats correspondants.
-- Gestion des recherches sans résultat.
+## 🛠️ Technologies utilisées
 
-## 6. Filtrage des séries
-- Filtrage par genre.
-- Combinaison de la recherche et du filtre.
-- Actualisation dynamique des résultats.
+- HTML5 : structure de l'application.
+- CSS3 : mise en forme et design.
+- JavaScript ES6+ : logique et interactions.
+- Axios CDN : communication avec l'API.
+- Git & GitHub : gestion des versions du projet.
 
-## 7. Ajout d'une nouvelle série
-- Création et gestion du formulaire.
-- Validation des champs.
-- Ajout d'une nouvelle série à la liste.
-- Actualisation de l'affichage.
+## 📂 Structure du projet
 
-## 8. Gestion des erreurs
-- Gestion des erreurs liées à l'API.
-- Vérification des données saisies.
-- Gestion des séries sans image ou informations.
-- Affichage de messages d'erreur appropriés.
+```text
+SerieScope/
+│
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── src/
+    ├── data/
+    │   └── store.js
+    ├── services/
+    │   ├── api.js
+    │   └── serieService.js
+    └── ui/
+        ├── cards.js
+        ├── filters.js
+        ├── form.js
+        └── notify.js
+```
 
-## 9. Tests et finalisation
-- Test de toutes les fonctionnalités.
-- Correction des bugs.
-- Vérification du Responsive Design.
-- Organisation et nettoyage du code.
-- Préparation de la présentation finale.
+## 🚀 Installation et lancement
 
-**Technologies utilisées :** HTML5, CSS3, Bootstrap 5, JavaScript (ES6+), API TVmaze et Git/GitHub.
+### 1. Cloner le projet
+
+```bash
+git clone https://github.com/mariam-jbaili/S-rieScope.git
+```
+
+### 2. Accéder au dossier
+
+```bash
+cd S-rieScope
+```
+
+### 3. Lancer l'application
+
+Ouvrir le fichier `index.html` avec l'extension **Live Server** de Visual Studio Code.
+
+**Remarque :** Axios est déjà intégré au projet via CDN. Aucune installation avec npm n'est nécessaire.
+
+## 🧩 Architecture du projet
+
+Le projet est organisé en plusieurs modules :
+
+- **api.js** : configuration d'Axios et de la communication avec l'API.
+- **serieService.js** : gestion des opérations CRUD sur les séries.
+- **cards.js** : affichage des séries.
+- **filters.js** : recherche et filtrage des séries.
+- **form.js** : gestion du formulaire d'ajout et de modification.
+- **notify.js** : affichage des notifications.
+- **store.js** : gestion de l'état de l'application.
+- **main.js** : initialisation et coordination des fonctionnalités.
+
+## 🌿 Gestion des branches Git
+
+- `main` : version principale et stable.
+- `develop` : branche de développement.
+- `axios-service` : intégration et configuration d'Axios.
+- `feature/navbar` : développement de la barre de navigation.
+
+## 👩‍💻 Auteur
+
+**Mariam Jbaili**
+
+Projet réalisé dans le cadre de la formation YouCode.
+
+---
+
+⭐ Merci de découvrir SérieScope !

@@ -30,7 +30,7 @@ chargerSeries();
                 }
                 const data = {
                     name: document.getElementById("nom_serie").value,
-                    genres: document.getElementById("Genre_ajouter"),
+                    genres: document.getElementById("Genre_ajouter").value.split(","),
                     language: document.getElementById("langue").value,
                     summary: document.getElementById("Description").value
                 };
@@ -122,10 +122,6 @@ async function reinitialiserFiltres() {
 
     nom_rechrche.value = "";
     select_genre.value = "";
-   
-
-    
-
     await chargerSeries();
 }
   const btn_Reinitialiser = document.getElementById("Reinitialiser");
