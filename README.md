@@ -95,3 +95,4 @@ Projet réalisé dans le cadre de la formation YouCode.
 ---
 
 ⭐ Merci de découvrir SérieScope !
+
